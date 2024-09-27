@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<style>
+*{
+    font-family: 'Times New Roman', Times, serif;
+}
+    .hero h1{
+        color: black;
+        font-size: 6rem;
+    }
+.color{
+    background-color: rgb(59, 232, 245);
+}
+.hero{
+    background-image: url('/static/hello.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    columns: white;
+}
+.hero h1{
+ font-size: 3rem;
+   
+}
+.hero p{
+    font-size: 1.5rem;
+}
+.card-image-top{
+    height: 380px;
+    width: 350px;
+}
+.card-title{
+    text-align: center;
+    color: red;
+}
+@media (max-width: 992px) {
+  
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+  
+  .hero p {
+    font-size: 1.25rem;
+  }
+.navbar-brand {
+    font-size: 1.5rem;
+  }
+
+  .btn-lg {
+    padding: 0.75rem 1.5rem;
+    font-size: 1.25rem;
+  }
+}
+@media (max-width: 768px) {
+  
+  .navbar-nav {
+    text-align: center;
+  }
+
+  .hero {
+    height: 70vh;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+.hero p {
+    font-size: 1rem;
+  }
+
+  .btn-lg {
+    font-size: 1rem;
+    padding: 0.5rem 1.25rem;
+  }
+  
+  .navbar-toggler {
+    margin-right: 0;
+  }
+}
+@media (max-width: 576px) {
+  
+  .navbar-brand {
+    font-size: 1.25rem;
+  }
+
+  .hero h1 {
+    font-size: 1.75rem;
+  }
+
+  .hero p {
+    font-size: 0.875rem;
+  }
+.btn-lg {
+    font-size: 0.875rem;
+    padding: 0.5rem 1rem;
+  }
+}
+
+</style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg color">
+        <div class="container-fluid" >
+            <a class="navbar-brand" href="#" >Welcome The Event Website</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"></li>
+                        <a class="nav-link active" href="#event" >Event</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#contact">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{ url_for('login') }}" class="btn btn-primary">Admin Login</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <section class="hero">
+        <div class="text-center">
+            <h1>WELCOME OUR WEBSITE</h1>
+            <P class="lead text-green">
+                TO PROVIDE THE INFORAMATION
+            </P>
+            <a href="#event" class="btn btn-success btn-lg">Learn More</a>
+            </div>
+    </section>
+    <section id="event" class="about-1">
+        <div class="container mt-5">
+            <h1><center>The Event</center></h1>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="/static/wedding.jfif" class="card-image-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Wedding</h5>
+                            <p class="card-text">This is Our Indian Culture And Start the New Generation in the Event.</p>
+                            <a href="" class="btn btn-primary">Details</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="/static/babyshower.jfif" class="card-image-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Baby Shower</h5>
+                            <p class="card-text">Very important Event of Womens's Life. This Event is Memorable of the Women's</p>
+                            <a href="" class="btn btn-primary my">Details</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="/static/birthday.jfif" class="card-image-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Birth Day</h5>
+                            <p class="card-text">A Event Every Person Memorable Once Our Life. And It is a Memory of Every Year.</p>
+                            <a href="" class="btn btn-primary">Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="contact" class="py-5 bg-light">
+        <div class="container">
+            <div class="row text-center">
+                <h2>Contact us to Need Any Information</h2>
+                <p class="lead">Fill out the form below to need the more information to contact our Team.</p>
+            </div>
+            <form  method="POST" action="/submit" id="contactform" class="contact-validation" novalidate>
+             <div class="mb-3">
+                <label for="Name" class="form-label">FULL NAME</label>
+                <input type="text" class="form-control" name="name" placeholder="Enter your Name" required>
+                <div class="invalid-feedback">Please Enter Your Name</div>
+                </div>
+            <div class="mb-3">
+                <label for="E-mail" class="form-label">Email</label>
+                <input type="email" class="form-control" name="email" placeholder="Enter your email" required>
+                <div class="invalid-feedback">Please Enter Your email</div>  
+                </div>
+            <div class="mb-3">
+                <label for="Phone" class="form-label">Phone</label>
+                <input type="tel" class="form-control" name="phone" placeholder="Enter your Mobile Number" required>
+                <div class="invalid-feedback">Please Enter Your Mobile Number</div>  
+                </div>
+            <button type="submit" class="btn btn-primary w-100">Submit</button>
+            </form>
+            {% with messages = get_flashed_messages() %}
+            {% if messages %}
+            <div class="alert alert-success mt-3" role="alert">
+                <ul>
+                    {% for message in messages %}
+                        <li>{{ message }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        {% endif %}
+        {% endwith %}
+        <br>
+        </div>
+    </section>
+    <footer class="bg-dark text-white text-center py-3">
+    <p>@ 2025 Elango Software Developer. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
